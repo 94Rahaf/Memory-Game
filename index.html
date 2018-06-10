@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda|Righteous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main-responsive.css">
+    <title>Matching Game</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <!--HEADER-->
+        <header>
+            <h1>Matching Game</h1>
+            <hr>
+        </header>
+
+        <!--SCORE/TIME/RESTART PANEL-->
+        <section class="grid score-panel">
+            <div class="row">
+                <div class="col-5">
+                     <ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>                    
+                </div>
+                <span class="col-5 moves score-panel-subtitles">
+                    0
+                </span>
+                <span class="col-5 score-panel-subtitles">
+                    Moves
+                </span>
+                <span class="col-5 timer score-panel-subtitles">
+                    00:00
+                </span>
+                <span class="col-5 restart">
+                    <button class="restart fas fa-redo-alt"></button>
+                </span>
+            </div>
+        </section>
+
+        <!--CARD DECK-->
+        <ul id="deck" class="deck">
+        </ul>
+
+        <!--CONTACTS-->
+        <div class="contact">
+            "Your largest fear carries your deepest growth" - Unknown
+            <br /> Powered by © Monica Moura
+            <br /> <a href="mailto:monica.a.moura@hotmail.com">E-mail</a> | <a href="https://www.facebook.com/monica.moura.1981" target="_blank">Facebook</a> | <a href="https://www.linkedin.com/in/monica-moura-39024046/"
+                target="_blank">LinkedIn</a> | <a href="https://github.com/Negmah" target="_blank">GitHub</a>
+        </div>
+
+        <hr class="ending-line">
+
+
+    </div>
+
+
+    <!--FOOTER-->
+    <footer id="credits">
+        CREDITS
+        <i class="fas fa-angle-double-down"></i>
+        <ul class="credits-list">
+                <li>JS awesome tutoring by <a href="https://github.com/jvincent3" target=_blank">John Vincent</a></li>
+                <li>CSS3 Gradient Background Animation<br /><a href="https://codepen.io/P1N2O/pen/pyBNzX" target="_blank">original code by Manuel Pinto</a></li>
+                <li>CSS3 Carbon Effect<br /><a href="https://codepen.io/manifestinteractive/pen/nyfdA" target="_blank">original code by Peter Schmalfeldt</a></li>
+            </ul>
+    </footer>
+
+    <!--MODAL-->
+    <div id="modal" class="modal-position">
+        <div class="inner-modal">
+        <p class="winHeader">You awesome human! <br />You just won!</p>
+        <!--<span class="far fa-star fa-spin win"></span>-->
+        <span class="finalRating"></span>
+        <p>In <span class="numMoves">0</span> moves</p>
+        <p>In <span class="gameTime">00:00</span></p>
+        <br/>
+        <button type="button" class="restart playAgain">
+        Play again?
+        </button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
