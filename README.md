@@ -8,45 +8,35 @@ This project aims to test each student's ability to implement basic vanilla Java
 
 #### Project specifications
 ###### Game behavior
-  - *Memory Game Logic* > The game randomly shuffles the cards. A user wins once all cards have successfully been matched.
-  - *Congratulations Popup* > When a user wins the game, a modal appears to congratulate the player and ask if they want to play again. It should also tell the user how much time it took to win the game, and what the star rating was.
-  - *Restart Button* > A restart button allows the player to reset the game board, the timer, and the star rating.
-  - *Star Rating* > The game displays a star rating (from 1 to at least 3) that reflects the player's performance. At the beginning of a game, it should display at least 3 stars. After *some* number of moves, it should change to a lower star rating. After a few more moves, it should change to a even lower star rating (down to 1).
-  - *Timer* > When the player starts a game, a displayed timer should also start. Once the player wins the game, the timer stops.
-  - *Move Counter* > Game displays the current number of moves a user has made. The number of moves needed to change the rating is up to you, but it should happen at *some* point.
+  - **Memory Game Logic** > The game randomly shuffles the cards. A user wins once all cards have successfully been matched.
+  - **Congratulations Popup** > When a user wins the game, a modal appears to congratulate the player and ask if they want to play again. It should also tell the user how much time it took to win the game, and what the star rating was.
+  - **Restart Button** > A restart button allows the player to reset the game board, the timer, and the star rating.
+  - **Star Rating** > The game displays a star rating (from 1 to at least 3) that reflects the player's performance. At the beginning of a game, it should display at least 3 stars. After *some* number of moves, it should change to a lower star rating. After a few more moves, it should change to a even lower star rating (down to 1).
+  - **Timer** > When the player starts a game, a displayed timer should also start. Once the player wins the game, the timer stops.
+  - **Move Counter** > Game displays the current number of moves a user has made. The number of moves needed to change the rating is up to you, but it should happen at *some* point.
 
 ###### Interface Design
-- *Styling* > Application uses CSS to style components for the game.
-- *Usability* > All application components are usable across modern desktop, tablet, and phone browsers.
+- **Styling** > Application uses CSS to style components for the game.
+- **Usability** > All application components are usable across modern desktop, tablet, and phone browsers.
 
 ###### Documentation
-- *README* > A README file is included detailing the game and all dependencies.
-- *Comments* > Comments are present and effectively explain longer code procedure when necessary.
-- *Code Quality* > Code is formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html).
+- **README** > A README file is included detailing the game and all dependencies.
+- **Comments** > Comments are present and effectively explain longer code procedure when necessary.
+- **Code Quality** > Code is formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html).
+
+*** 
 
 #### Play the game
 
+To play the game please follow this link >> [http://negmah.github.io/memory-game](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
 
-You can also:
-  - Import and save files from GitHub, Dropbox, Google Drive and One Drive
-  - Drag and drop markdown and HTML files into Dillinger
-  - Export documents as Markdown, HTML and PDF
+![N|Solid](http://res.cloudinary.com/negmah/image/upload/v1528493255/mem-game-thumb.png)
 
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]
+***
 
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
 
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
 
-### Tech
 
-Dillinger uses a number of open source projects to work properly:
 
 * [AngularJS] - HTML enhanced for web apps!
 * [Ace Editor] - awesome web-based text editor
