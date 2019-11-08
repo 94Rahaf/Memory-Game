@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+}
+html,
+body {
+  text-align: center;
+  font-family: Arial, Helvetica;
+  /* overflow: hidden; */
+  font-family:georgia,garamond,serif;font-size:16px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.bg-content{
+  background-color:rgb(113, 211, 143) !important;
+  box-shadow: 5px 5px 8px #aaaaaa !important;
+  
+	
+}
+
+.comment{
+  font-size:2em;
+}
+h1{
+  color: rgb(15, 58, 44);
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+.btn{
+  background: #1d574a !important;
+  border-color:  rgb(44, 109, 93) !important;
+  color:#fff !important;
+  font-size: 1.5em !important;
+  margin-top: 25px;
+    
+}
+
+.text{
+font-size: 2em !important;
+font-weight: bold !important;
+}
+
+.container{
+  height: 400px !important;
+  margin-top: 150px !important;
+  margin-bottom: 60px !important;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+  padding-left: 40px !important;
+  padding-right: auto !important;
+  border-radius: 25px !important;
+  width: 600px !important;
+}
+.p1{
+color:rgba(124, 124, 124, 0.794);
+}

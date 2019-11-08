@@ -1,96 +1,116 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <title>Memory Game</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda|Righteous">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/main-responsive.css">
-    <title>Matching Game</title>
+        <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
     <div class="container">
-
-        <!--HEADER-->
         <header>
-            <h1>Matching Game</h1>
-            <hr>
+            <h1>Memory Game</h1>
         </header>
 
-        <!--SCORE/TIME/RESTART PANEL-->
-        <section class="grid score-panel">
-            <div class="row">
-                <div class="col-5">
-                     <ul class="stars">
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                    </ul>                    
-                </div>
-                <span class="col-5 moves score-panel-subtitles">
-                    0
-                </span>
-                <span class="col-5 score-panel-subtitles">
-                    Moves
-                </span>
-                <span class="col-5 timer score-panel-subtitles">
-                    00:00
-                </span>
-                <span class="col-5 restart">
-                    <button class="restart fas fa-redo-alt"></button>
-                </span>
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Move(s)
+
+            <div class="timer">
             </div>
+
+            <div class="restart" onclick="playAgain()">
+        		<i class="fa fa-repeat"></i>
+        	</div>
         </section>
 
-        <!--CARD DECK-->
-        <ul id="deck" class="deck">
+        <ul class="deck" id="card-deck">
+            <li class="card" type="diamond">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card" type="plane">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="bolt" >
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+            <li class="card" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="diamond">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card" type="bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="plane">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
         </ul>
-
-        <!--CONTACTS-->
-        <div class="contact">
-            "Your largest fear carries your deepest growth" - Unknown
-            <br /> Powered by © Monica Moura
-            <br /> <a href="mailto:monica.a.moura@hotmail.com">E-mail</a> | <a href="https://www.facebook.com/monica.moura.1981" target="_blank">Facebook</a> | <a href="https://www.linkedin.com/in/monica-moura-39024046/"
-                target="_blank">LinkedIn</a> | <a href="https://github.com/Negmah" target="_blank">GitHub</a>
+        
+          <div id="popup2" class="overlay">
+            <div class="popup">
+                <h2 class="center winer-icons">Congratolation you are WINNER!</h2>
+                <a class="close" href="#" >×</a>
+                <div class="content-1">
+                   
+                </div>
+                <div class="content-2">
+                    <p>You made <span id="finalMove"> </span> moves </p>
+                    <p>in <span id="totalTime"> </span> </p>
+                    <p>Rating:  <span id="starRating"></span></p>
+                </div>
+                <button id="play-again" class="btn btn-info btn-lg" onclick="playAgain()">
+                    Play again ?
+                </button>
+            </div>
         </div>
+        
+        
+ <!------------------------Winner popup---------------------------------------->
+  
 
-        <hr class="ending-line">
-
+  
 
     </div>
-
-
-    <!--FOOTER-->
-    <footer id="credits">
-        CREDITS
-        <i class="fas fa-angle-double-down"></i>
-        <ul class="credits-list">
-                <li>JS awesome tutoring by <a href="https://github.com/jvincent3" target=_blank">John Vincent</a></li>
-                <li>CSS3 Gradient Background Animation<br /><a href="https://codepen.io/P1N2O/pen/pyBNzX" target="_blank">original code by Manuel Pinto</a></li>
-                <li>CSS3 Carbon Effect<br /><a href="https://codepen.io/manifestinteractive/pen/nyfdA" target="_blank">original code by Peter Schmalfeldt</a></li>
-            </ul>
-    </footer>
-
-    <!--MODAL-->
-    <div id="modal" class="modal-position">
-        <div class="inner-modal">
-        <p class="winHeader">You awesome human! <br />You just won!</p>
-        <!--<span class="far fa-star fa-spin win"></span>-->
-        <span class="finalRating"></span>
-        <p>In <span class="numMoves">0</span> moves</p>
-        <p>In <span class="gameTime">00:00</span></p>
-        <br/>
-        <button type="button" class="restart playAgain">
-        Play again?
-        </button>
-        </div>
-    </div>
-
     <script src="js/app.js"></script>
 </body>
 </html>
+
